@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import HomePage from "./pages/HomePage";
 import SignUp from "./pages/SignUpPage";
+import SignIn from "./pages/SignInPage";
+import Ranking from "./pages/Ranking";
 
 export default function App() {
 
@@ -10,9 +12,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<HomePage />} />
-          <Route path="/signin" />
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/ranking" />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/ranking" element={<Ranking />} />
         </Routes>
       </BrowserRouter>
     </PagesContainer>

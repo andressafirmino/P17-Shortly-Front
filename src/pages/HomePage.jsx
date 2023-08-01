@@ -13,16 +13,16 @@ export default function HomePage() {
                 </div>
                 <div className="position"></div>
             </RankingContainer>
-            <div className="text"><p></p></div>
+            <div className="text"><p>Crie sua conta para usar nosso serviço!</p></div>
         </HomeContainer>
     )
 }
 
-const HomeContainer = styled.div`
-    
+const HomeContainer = styled.div`    
     .text {
         width: 728px;
         height: 45px;
+        margin: 0 auto;
         p {            
             font-size: 36px;
             font-weight: 700;
@@ -38,11 +38,13 @@ const RankingContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
     .title {
         width: 295px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 40px;
         img {
             width: 56px;
             height: 50px;
@@ -62,6 +64,6 @@ const RankingContainer = styled.div`
         border: 1px solid rgba(120, 177, 89, 0.25);
         background: #FFF;
         box-shadow: 0px 4px 24px 0px rgba(120, 177, 89, 0.12);
-
+        margin-bottom: 30px;
     }
 `

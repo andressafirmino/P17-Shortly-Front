@@ -41,13 +41,15 @@ const GlobalStyle = createGlobalStyle`
             height: 60px;
             outline: none;
             border: none;
-            border-radius: 5px;
+            border-radius: 12px;
             background-color: #5D9040;
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 700;
             color: #fff;
             cursor: pointer;
             padding: 12px;
+            text-align: center;
+            margin-top: 50px;
         }
         link {
             text-decoration: none;
