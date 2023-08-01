@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Trofeu from "../Image/Trofeu.svg"
+import Menu from "../components/Menu";
 
 export default function HomePage() {
     return (
         <HomeContainer>
-            
+            <Menu/>
             <RankingContainer>
                 <div className="title">
                     <img src={Trofeu} />
@@ -18,10 +19,7 @@ export default function HomePage() {
 }
 
 const HomeContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     .text {
         width: 728px;
         height: 45px;

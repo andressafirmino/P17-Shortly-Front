@@ -4,28 +4,33 @@ import styled from "styled-components";
 
 export default function Menu() {
     return (
-        <>
-        <Menu>
+        <MenuContainer>
+            <MenuLinks>
                 <Link className="login" to="/login">Entrar</Link>
-                <Link className="signup" to="/sign-up">Cadastro</Link>
-            </Menu>
+                <Link className="signup" to="/signup">Cadastro</Link>
+            </MenuLinks>
             <LogoContainer>
                 <p>Shortly</p>
                 <img src={Logo} />
             </LogoContainer>
-            </>
+        </MenuContainer>
     )
 }
-//const MenuContainer = 
-const Menu = styled.div`
+const MenuContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+const MenuLinks = styled.div`
     width: 150px;
     height: 18px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    right: 50px;
-    top: 40px;
+    right: 250px;
+    top: 60px;
     link {
         font-size: 14px;
         font-weight: 400;
