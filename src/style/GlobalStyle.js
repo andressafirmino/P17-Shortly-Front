@@ -49,10 +49,9 @@ const GlobalStyle = createGlobalStyle`
             cursor: pointer;
             padding: 12px;
             text-align: center;
-            margin-top: 50px;
         }
-        link {
-            text-decoration: none;
+        .top {
+            margin-top: 50px;
         }
     }
 `
