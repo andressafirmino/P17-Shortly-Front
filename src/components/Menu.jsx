@@ -12,7 +12,7 @@ export default function Menu() {
                     <p className="green">Seja bem-vindo: </p>
                     <MenuLinks>
                         <Link className="gray" to="/home">Home</Link>
-                        <Link className="gray" to="/signin">Ranking</Link>
+                        <Link className="gray" to="/ranking">Ranking</Link>
                         <Link className="gray" to="/home">Sair</Link>
                     </MenuLinks>
                 </Welcome>
@@ -47,7 +47,6 @@ const Welcome = styled.div`
         font-size: 14px;
         font-weight: 400;
         margin-top: 40px;
-        margin-left: 150px;
         color: #5D9040;
     }
 `
@@ -57,7 +56,6 @@ const MenuLinks = styled.div`
     justify-content: flex-end;
     align-items: center;
     margin-top: 40px;
-    margin-right: 150px;
     link {
         font-size: 14px;
         font-weight: 400;
