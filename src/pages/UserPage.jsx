@@ -36,6 +36,7 @@ export default function UserPage() {
             headers: { authorization: `Bearer ${token}` }
         })
             .then(() => {
+                setLink('');
                 setReload(true);
             })
             .catch(e => alert(e.response.data));
