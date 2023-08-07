@@ -21,7 +21,6 @@ export default function UserPage() {
         })
             .then(response => {
                 setMyLinks(response.data.shortenedUrls);
-                setReload(true);
                 setReload(false);
             })
             .catch(e => alert(e.response.data));
@@ -33,7 +32,7 @@ export default function UserPage() {
         axios.post(url, body, {
             headers: { authorization: `Bearer ${token}` }
         })
-            .then(response => {
+            .then(() => {
                 setReload(true);
             })
             .catch(e => alert(e.response.data));
@@ -42,8 +41,9 @@ export default function UserPage() {
     function openLink(shortUrl, urlLink) {
         const url = `${import.meta.env.VITE_API_URL}/urls/open/${shortUrl}`
         axios.get(url)
-            .then(response => {
-                window.open(urlLink, '_blank')
+            .then(() => {
+                setReload(true);
+                window.open(urlLink, '_blank');
             })
             .catch(e => alert(e.response.data));
     }
