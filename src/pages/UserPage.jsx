@@ -21,12 +21,15 @@ export default function UserPage() {
         })
             .then(response => {
                 setMyLinks(response.data.shortenedUrls);
+                setReload(true);
                 setReload(false);
             })
             .catch(e => alert(e.response.data));
     }, [reload])
 
-    function short() {
+    function short(e) {
+        e.preventDefault();
+
         const url = `${import.meta.env.VITE_API_URL}/urls/shorten`;
         const body = { url: link };
         axios.post(url, body, {
