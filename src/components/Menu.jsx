@@ -1,19 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../Image/Logo.svg";
 import styled from "styled-components";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../context/auth";
 
 export default function Menu() {
-    const [login, setLogin] = useState(true);
+
+    const {name, login, setLogin, setToken} = useContext(AuthContext);
+    const navigate = useNavigate();
+    function logout() {
+        localStorage.clear();
+        setToken('');
+        setLogin(false);
+        navigate("/")
+    }
+
     return (
         <MenuContainer>
             {login && (
                 <Welcome>
-                    <p className="green">Seja bem-vindo: </p>
+                    <p className="green">Seja bem-vindo: {name}</p>
                     <MenuLinks>
-                        <Link className="gray" to="/home">Home</Link>
+                        <Link className="gray" to="/users/me">Home</Link>
                         <Link className="gray" to="/ranking">Ranking</Link>
-                        <Link className="gray" to="/home">Sair</Link>
+                        <Link className="gray" to="/" onClick={logout}>Sair</Link>
                     </MenuLinks>
                 </Welcome>
 
